@@ -64,7 +64,8 @@ static CGFloat const STHUDNewShinyHUDViewLabelVerticalPadding = 4;
 		CGMutablePathRef path = CGPathCreateMutable();
 		CGPathAddArc(path, NULL, 40, 40, 20, (CGFloat)(M_PI_4), (CGFloat)(2 * M_PI), false);
 		activityIndicatorLayer.path = path;
-		CGPathRelease(path), path = NULL;
+        CGPathRelease(path);
+        path = NULL;
 
 		_titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 		_titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
